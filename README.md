@@ -29,3 +29,38 @@ A sophisticated, real-time AI assistant built using the **Llama-3.3-70b** model 
 ```bash
 git clone [https://github.com/bilalwebs/groq-streaming-chatbot.git](https://github.com/bilalwebs/groq-streaming-chatbot.git)
 cd groq-streaming-chatbot
+
+2. Install Dependencies
+Bash
+pip install gradio groq
+3. Environment Setup
+Create a .env file or set your API key in your terminal:
+
+Bash
+# Windows
+set GROQ_API_KEY=your_api_key_here
+
+# Linux/Mac
+export GROQ_API_KEY="your_api_key_here"
+4. Run the Application
+Bash
+python app.py
+📂 Project Structure
+Plaintext
+├── app.py              # Main application logic & UI
+├── memory.json         # Persistent user facts (Auto-generated)
+├── requirements.txt    # List of dependencies
+└── README.md           # Documentation
+💡 How It Works
+Memory Detection: The bot scans user input for specific patterns (e.g., "My name is...") and updates memory.json.
+
+System Prompt Injection: The user's stored information is injected into the system prompt for personalized interaction.
+
+Streaming Logic: Uses Python generators and time.sleep to create a smooth UI experience in Gradio.
+
+👨‍💻 Author
+Bilal Hussain Software Engineering Student | Full-Stack & AI Developer
+
+LinkedIn: [https://www.linkedin.com/in/bilal-hussain-dev/]
+
+GitHub: https://github.com/bilalwebs
